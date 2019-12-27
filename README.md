@@ -1,4 +1,3 @@
-# transmundane
 Transmundane - Intuitive Magic
 ---
 

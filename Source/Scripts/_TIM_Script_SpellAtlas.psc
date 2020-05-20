@@ -1,9 +1,9 @@
-Scriptname _TIM_Script_SpellStore extends ObjectReference  
+Scriptname _TIM_Script_SpellAtlas extends ObjectReference  
 
 Actor Property _TIM_PlayerRef Auto
-ObjectReference Property _TIM_Furtniture_SpellStore Auto
+ObjectReference Property _TIM_Furniture_SpellAtlas Auto
 
-Spell Property SpellRefTest Auto
+;Spell Property SpellRefTest Auto
 
 _TIM_Script_Quest Script_Quest
 
@@ -18,7 +18,7 @@ Event OnInit()
 endEvent
 
 Event OnRead()
-    Debug.Notification("_TIM: _TIM_Script_SpellStore.OnRead()")
+    Debug.Notification("_TIM: _TIM_Furniture_SpellAtlas.OnRead()")
     
     if (Utility.IsInMenuMode())
         Debug.Notification("_TIM: Utility.IsInMenuMode()")
@@ -28,5 +28,5 @@ Event OnRead()
     Utility.Wait(0.01)
     Game.EnablePlayerControls(False, False, False, False, False, True) ; Undo DisablePlayerControls
 
-    _TIM_Furtniture_SpellStore.Activate(_TIM_PlayerRef)
+    _TIM_Furniture_SpellAtlas.Activate(_TIM_PlayerRef)
 endEvent

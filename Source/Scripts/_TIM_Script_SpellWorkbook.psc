@@ -1,10 +1,10 @@
-Scriptname _TIM_Script_Tome extends ObjectReference  
+Scriptname _TIM_Script_SpellWorkbook extends ObjectReference  
 
 _TIM_Script_Quest Script_Quest
 
 int Property SpellToLearn Auto
 int Property XPtoGain Auto
-Bool tomeRead = false
+Bool studied = false
 
 Event OnInit()
     ;Debug.Notification("_TIM: Script_Tome.OnInit()")
@@ -17,9 +17,9 @@ Event OnInit()
 endEvent
 
 Event OnRead()
-    if(!tomeRead)
+    if(!studied)
         ;Debug.Notification("_TIM: OnRead()")
-        Script_Quest.PlayerReadSpellTome(SpellToLearn, XPtoGain)
-        tomeRead = true
+        Script_Quest.PlayerActivity(3, SpellToLearn, XPtoGain)
+        studied = true
     endIf
 endEvent
